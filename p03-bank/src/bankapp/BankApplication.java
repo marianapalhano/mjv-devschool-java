@@ -7,10 +7,11 @@ public class BankApplication {
 
 	public static void main(String[] args) {
 		
-		Account account = new Account();
+		Account account = new Account(50.0, 20.0);
+		
 		AccountService terminal = new AccountService();
-		terminal.deposit(account, 12.0);
-		System.out.println(account.getBalance());		
+		terminal.withdraw(account, 60);
+				
 		
 	}
 

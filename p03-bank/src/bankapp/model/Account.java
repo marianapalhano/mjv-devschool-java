@@ -1,7 +1,14 @@
 package bankapp.model;
 
 public class Account {
-	private double balance;	
+	public Account(double balance, double overdraft) {
+		super();
+		this.balance = balance;
+		this.overdraft = overdraft;
+	}
+
+	private double balance;
+	private double overdraft;
 	
 	public void setBalance(double balance) {
 		this.balance = balance;
@@ -9,6 +16,10 @@ public class Account {
 	
 	public double getBalance() {
 		return this.balance;
+	}
+	
+	public double getOverdraft() {
+		return this.overdraft;
 	}
 	
 	public double addBalance(double value) {
